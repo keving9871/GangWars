@@ -6,34 +6,62 @@ using UnityEngine.UI;
 public class TerritoryController : MonoBehaviour
 {
     //Variables:
-    public float territoryProgress;
+    public PlayerController pc;
+    public float territoryCost;
+    public float captureRate, spawnRate;
     public bool gangOwned;
+   // public Text ownedTerritoryList;
+    public GameObject gangMember;
+    public Material captureMat;
+    private Material objectMat;
+
+
+    //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS
+    //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
 
     void Start()
     {
-        territoryProgress = 0f;
+        objectMat = GetComponent<Renderer>().material;
+        captureRate = 500f;
+        pc.reputation = 0;
         gangOwned = false;
+//        ownedTerritoryList.enabled = false;
+
+        if (tag == "default")
+        {
+            territoryCost = 1f;
+            spawnRate = Time.time + 5.0f;
+        }
     }
 
     void Update()
     {
-        if (territoryProgress >= 5000f)
+        if (gangOwned == true)
         {
-            gangOwned = true;
-        }
-    }
+            if (Time.time > spawnRate)
+            {
+                Instantiate(gangMember);
+                spawnRate += 5.0f;
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+            //    ownedTerritoryList.enabled = true;
+            }
+            if (Input.GetKey(KeyCode.R))
+            {
+         //       ownedTerritoryList.enabled = false;
+            }
 
-    private void FixedUpdate()
-    {
-        if (territoryProgress >= 0)
-        territoryProgress -= 1f;
+            objectMat = captureMat;
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && pc.reputation >= territoryCost)
         {
-            territoryProgress += 5f;
+            gangOwned = true;
         }
     }
 }
