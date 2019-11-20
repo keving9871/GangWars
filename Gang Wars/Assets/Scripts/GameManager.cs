@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Text player1WinText;
     public Text player2WinText;
     public Text tieText;
+    public Text time;
+    private float timeleft;
 
     void Start()
     {
@@ -19,11 +22,15 @@ public class GameManager : MonoBehaviour
         player1WinText.enabled = false;
         player2WinText.enabled = false;
         tieText.enabled = false;
+        time.enabled = true;
     }
 
 
     void Update()
     {
+        timeleft = timeLimit - currentTime;
+        timeleft = Mathf.Round(timeleft);
+        time.text = "Time Left: " + timeleft.ToString();
         currentTime = Time.time;
         if (currentTime >= timeLimit)
         {
