@@ -15,14 +15,13 @@ public class TerritoryController : MonoBehaviour
     public Material captureMat;
     private Material objectMat;
 
-
     //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS
     //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
 
     void Start()
     {
         objectMat = GetComponent<Renderer>().material;
-        captureRate = 500f;
+        captureRate = 500.0f;
         pc.reputation = 0;
         gangOwned = false;
 //        ownedTerritoryList.enabled = false;
@@ -40,9 +39,13 @@ public class TerritoryController : MonoBehaviour
         {
             if (Time.time > spawnRate)
             {
-                Instantiate(gangMember);
+                Instantiate(gangMember, gangMember.transform);
                 spawnRate += 5.0f;
             }
+            //if (spawnRate >= 10.0f)
+            //{
+            //    spawnRate = 5.0f;
+            //}
             if (Input.GetKeyDown(KeyCode.E))
             {
             //    ownedTerritoryList.enabled = true;
@@ -59,9 +62,12 @@ public class TerritoryController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && pc.reputation >= territoryCost)
+        if (Input.GetKey(KeyCode.E))
         {
-            gangOwned = true;
+            if (other.gameObject.tag == "Player" && pc.reputation >= territoryCost)
+            {
+                gangOwned = true;
+            }
         }
     }
 }

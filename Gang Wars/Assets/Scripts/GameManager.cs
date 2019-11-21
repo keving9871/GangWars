@@ -12,27 +12,28 @@ public class GameManager : MonoBehaviour
     public Text player1WinText;
     public Text player2WinText;
     public Text tieText;
-    public Text time;
+    public Text timeLeftText;
     private float timeleft;
 
     void Start()
     {
-        currentTime = Time.time;
-        timeLimit = 500f;
+        currentTime = Time.deltaTime;
         player1WinText.enabled = false;
         player2WinText.enabled = false;
         tieText.enabled = false;
-        time.enabled = true;
+        timeLeftText.enabled = true;
     }
 
 
     void Update()
     {
+        //Time Left:
         timeleft = timeLimit - currentTime;
         timeleft = Mathf.Round(timeleft);
-        time.text = "Time Left: " + timeleft.ToString();
-        currentTime = Time.time;
-        if (currentTime >= timeLimit)
+        timeLeftText.text = "Time Left: " + timeleft.ToString();
+
+        //Check if time is up and end game:
+        if (currentTime >= timeleft)
         {
             gameOver();
         }
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     void gameOver()
     {
+        print("Game Over");
         if (player1TerritoriesOwned > player2TerritoriesOwned)
         {
             player1WinText.enabled = true;

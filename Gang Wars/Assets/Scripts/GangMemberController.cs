@@ -7,7 +7,7 @@ public class GangMemberController : MonoBehaviour
     public PlayerController pc;
     public GameObject Player;
     public float moveSpeed;
-    public float distanceThreshold;
+    public float distanceThreshold; // How close it is willing to get to something
 
     void Start()
     {
