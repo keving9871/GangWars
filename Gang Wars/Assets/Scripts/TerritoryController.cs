@@ -14,6 +14,7 @@ public class TerritoryController : MonoBehaviour
     public GameObject gangMember;
     public Material captureMat;
     private Material objectMat;
+    bool readyToSpawn;
 
     //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS
     //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
@@ -30,16 +31,18 @@ public class TerritoryController : MonoBehaviour
             territoryCost = 1f;
             spawnRate = Time.deltaTime + 5.0f;
         }
+
+        readyToSpawn = true;
     }
 
     void Update()
     {
         if (gangOwned == true)
         {
-            if (Time.deltaTime > spawnRate)
+            if (readyToSpawn == true)
             {
-                Instantiate(gangMember, this.transform);
-                spawnRate += 5.0f;
+                InvokeRepeating("Spawn", 0, 5);
+                readyToSpawn = false;
             }
             //if (spawnRate >= 10.0f)
             //{
@@ -58,6 +61,11 @@ public class TerritoryController : MonoBehaviour
             objectMat = captureMat;
         }
 
+    }
+
+    private void Spawn()
+    {
+        Instantiate(gangMember, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerStay(Collider other)
