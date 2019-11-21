@@ -8,7 +8,7 @@ public class TerritoryController : MonoBehaviour
     //Variables:
     public PlayerController pc;
     public float territoryCost;
-    public float captureRate, spawnRate;
+    public float spawnRate, captureRate;
     public bool gangOwned;
    // public Text ownedTerritoryList;
     public GameObject gangMember;
@@ -21,15 +21,14 @@ public class TerritoryController : MonoBehaviour
     void Start()
     {
         objectMat = GetComponent<Renderer>().material;
-        captureRate = 500.0f;
-        pc.reputation = 0;
+        //captureRate = 500.0f;
         gangOwned = false;
-//        ownedTerritoryList.enabled = false;
+        //ownedTerritoryList.enabled = false;
 
         if (tag == "default")
         {
             territoryCost = 1f;
-            spawnRate = Time.time + 5.0f;
+            spawnRate = Time.deltaTime + 5.0f;
         }
     }
 
@@ -37,15 +36,16 @@ public class TerritoryController : MonoBehaviour
     {
         if (gangOwned == true)
         {
-            if (Time.time > spawnRate)
+            if (Time.deltaTime > spawnRate)
             {
-                Instantiate(gangMember, gangMember.transform);
+                Instantiate(gangMember, this.transform);
                 spawnRate += 5.0f;
             }
             //if (spawnRate >= 10.0f)
             //{
             //    spawnRate = 5.0f;
             //}
+
             if (Input.GetKeyDown(KeyCode.E))
             {
             //    ownedTerritoryList.enabled = true;

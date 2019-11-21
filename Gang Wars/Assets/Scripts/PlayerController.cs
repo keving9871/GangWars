@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        reputation = 1;
+        //reputation = 1;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Camera.main.transform.forward * -moveSpeed * Time.deltaTime;
         }
-        if(!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
         {
             rb.velocity = Camera.main.transform.forward * 0;
         }

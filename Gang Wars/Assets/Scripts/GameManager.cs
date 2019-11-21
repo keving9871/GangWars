@@ -17,23 +17,24 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        currentTime = Time.deltaTime;
         player1WinText.enabled = false;
         player2WinText.enabled = false;
         tieText.enabled = false;
         timeLeftText.enabled = true;
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
 
     void Update()
     {
-        //Time Left:
-        timeleft = timeLimit - currentTime;
-        timeleft = Mathf.Round(timeleft);
-        timeLeftText.text = "Time Left: " + timeleft.ToString();
+        currentTime = Time.deltaTime;
+        currentTime = Mathf.Round(currentTime);
+        timeLeftText.text = "Current Time: " + currentTime.ToString();
+
+
 
         //Check if time is up and end game:
-        if (currentTime >= timeleft)
+        if (currentTime >= timeLimit)
         {
             gameOver();
         }
