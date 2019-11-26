@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class RepBonus : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private PlayerController pc;
+
+    public void Start()
     {
-        
+        pc = new PlayerController();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.tag == "Player1")
+        {
+            pc.reputation += 5;
+            Destroy(this.gameObject);
+        }
+        if (other.gameObject.tag == "Player2")
+        {
+            pc.reputation += 5;
+            Destroy(this.gameObject);
+        }
     }
 }

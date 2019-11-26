@@ -46,8 +46,8 @@ public class CameraController : MonoBehaviour
     private void LateUpdate()
     {
         //Gets mouse movement x and y and multiplies them with speeds and moves camera with them
-        x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-        y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+        x += Input.GetAxis("Horizontal") * xSpeed * distance * 0.02f;
+        y -= Input.GetAxis("Horizontal") * ySpeed * 0.02f;
 
         //Set rotation
         Quaternion rotation = Quaternion.Euler(y, x, 0);

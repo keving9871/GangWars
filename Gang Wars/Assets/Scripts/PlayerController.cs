@@ -9,10 +9,13 @@ public class PlayerController : MonoBehaviour
     public int reputation;
     public float moveSpeed;
     public Rigidbody rb;
-    public List<GameObject> ownedTerritoryList = new List<GameObject>(); //HERES THE LIST
+    public List<GameObject> ownedTerritoryList = new List<GameObject>(); //HERES THE LIST FOR TERRITORIES
+    public List<GameObject> ownedGangMembersList = new List<GameObject>(); // Here's the list for gang members
 
     //UI:
     public Text currentReputation;
+    public Text player1GangMembersListText;
+    public Text player2GangMembersListText;
 
     //Controls:
     public KeyCode forward;
@@ -22,6 +25,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player1GangMembersListText.enabled = false;
+        player2GangMembersListText.enabled = false;
     }
 
     void Update()
@@ -43,6 +48,17 @@ public class PlayerController : MonoBehaviour
         if (!Input.GetKey(forward) && !Input.GetKey(back))
         {
             rb.velocity = Camera.main.transform.forward * 0;
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            //Add the list to the text object
+            player1GangMembersListText.enabled = true;
+        }
+        if (Input.GetKey(KeyCode.Slash))
+        {
+            //Add the list to the text object
+            player2GangMembersListText.enabled = true;
         }
     }
 

@@ -72,7 +72,7 @@ public class TerritoryController : MonoBehaviour
                 GMC.ownership = 1;
             }
 
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKey(KeyCode.RightShift))
             {
                 //ownedTerritoryListPlayer2.enabled = true; // MAKE THIS THE UI ENABLE FOR PLAYER 2
             }
