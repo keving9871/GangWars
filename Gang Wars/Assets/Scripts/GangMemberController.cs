@@ -13,6 +13,19 @@ public class GangMemberController : MonoBehaviour
 
     void Start()
     {
+        //Fill PlayerController in the inspector:
+        pc = new PlayerController();
+
+        //Fill Player1 in the inspector:
+        Player1 = GameObject.FindWithTag("Player1");
+
+        //Fill Player2 in the inspector:
+        Player2 = GameObject.FindWithTag("Player2");
+
+        //Set MoveSpeed and DistanceThreshold:
+        moveSpeed = 4f;
+        distanceThreshold = 2f;
+
         //Each gang member adds this much reputation to their owner:
         pc.reputation += 1;
 

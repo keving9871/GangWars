@@ -106,9 +106,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 0}
+  pc2: {fileID: 0}
+  GMC: {fileID: 0}
   territoryCost: 0
-  captureRate: 0
   spawnRate: 0
-  gangOwned: 0
-  ownedTerritoryList: {fileID: 0}
+  captureRate: 0
+  player1GangOwned: 0
+  player2GangOwned: 0
   gangMember: {fileID: 0}
+  captureMat: {fileID: 0}
+  capturedColorPlayer1: {r: 0.27612138, g: 0.5236815, b: 0.8018868, a: 0}
+  capturedColorPlayer2: {r: 0.7924528, g: 0.21306513, b: 0.21306513, a: 0}

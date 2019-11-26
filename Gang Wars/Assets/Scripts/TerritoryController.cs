@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TerritoryController : MonoBehaviour
 {
     //Variables:
-    public PlayerController pc;
+    public PlayerController pc, pc2;
     public GangMemberController GMC;
     public float territoryCost;
     public float spawnRate, captureRate;
@@ -17,16 +17,17 @@ public class TerritoryController : MonoBehaviour
     bool readyToSpawn;
     public Color capturedColorPlayer1, capturedColorPlayer2;
     GameObject otherPlayer;
+    GameObject thisPlayer;
 
     //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS
     //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
 
     void Start()
     {
-        if (pc != null)
-        {
-            pc.ownedTerritoryList.Add(gameObject);
-        }
+        //if (pc != null)
+        //{
+        //    pc.ownedTerritoryList.Add(gameObject);
+        //}
 
         objectMat = GetComponent<Renderer>().material;
         //captureRate = 500.0f; // FUTURE TIME IT TAKES TO CAPTURE AN ENEMY LAND
@@ -83,10 +84,11 @@ public class TerritoryController : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject thug =  Instantiate(gangMember, transform.position, Quaternion.identity) as GameObject;
-        
+        GameObject thug = Instantiate(gangMember, transform.position, Quaternion.identity) as GameObject;
+
         var thugScript = thug.GetComponent<GangMemberController>();
 
+        //Set their ownership on spawn:
         if (player1GangOwned == true)
         {
             thugScript.ownership = 0;
@@ -127,32 +129,43 @@ public class TerritoryController : MonoBehaviour
             {
                 if (pc.reputation >= territoryCost)
                 {
-                    player1GangOwned = true;
-                    player2GangOwned = false;
+                    player1GangOwned = false;
+                    player2GangOwned = true;
                 }
                 takeTerritory(player1GangOwned);
             }
         }
+
     }
 
     public void takeTerritory(bool player1Owned)
     {
+        print("take territory");
+
+        //not owned add it to territory list
         if (!pc.ownedTerritoryList.Contains(gameObject))
         {
             pc.ownedTerritoryList.Add(gameObject);
             print(pc.ownedTerritoryList.Count);
-
         }
 
+        //if owned by player one, other player = player2
         if (player1Owned)
         {
             otherPlayer = GameObject.FindWithTag("Player2");
             var pcOtherPlayer = otherPlayer.GetComponent<PlayerController>();
+            thisPlayer = GameObject.FindWithTag("Player1");
+            var pcThisPlayer = thisPlayer.GetComponent<PlayerController>();
 
             if (pcOtherPlayer.ownedTerritoryList.Contains(gameObject))
             {
+                //remove it from other player
                 pcOtherPlayer.ownedTerritoryList.Remove(gameObject);
             }
+
+            GameObject firstGangMember = pcThisPlayer.ownedGangMembersList[0];
+            pcThisPlayer.ownedGangMembersList.Remove(firstGangMember);
+            
         }
 
         else

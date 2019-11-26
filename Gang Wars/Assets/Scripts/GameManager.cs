@@ -51,5 +51,6 @@ public class GameManager : MonoBehaviour
         {
             player2WinText.enabled = true;
         }
+        Time.timeScale = 0f;
     }
 }
