@@ -11,7 +11,7 @@ public class Farm : MonoBehaviour
 
     void Start() 
     { 
-        tc.gangOwned = false;
+//        tc.gangOwned = false;
         tc.territoryCost = 150000f;
         farmSpawnRate = Time.time + 3.75f;
         tc.captureRate = 500f;
@@ -19,7 +19,7 @@ public class Farm : MonoBehaviour
 
     void Update()
     {
-        if (tc.gangOwned == true)
+     //   if (tc.gangOwned == true)
         {
             if(Time.time > farmSpawnRate)
             {
@@ -38,7 +38,7 @@ public class Farm : MonoBehaviour
 
             if (tc.captureRate <= 0f)
             {
-                tc.gangOwned = true;
+           //     tc.gangOwned = true;
             }
 
         }
