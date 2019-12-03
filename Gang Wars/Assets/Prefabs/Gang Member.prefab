@@ -108,10 +108,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pc: {fileID: 0}
-  Player: {fileID: 0}
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
   moveSpeed: 0
   distanceThreshold: 0
-  ownership: 0
+  ownership: 1
+  player1Controlled: {r: 0.22316661, g: 0.5495497, b: 0.8018868, a: 0}
+  player2Controlled: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &-181842484864346180
 Rigidbody:
   m_ObjectHideFlags: 0
