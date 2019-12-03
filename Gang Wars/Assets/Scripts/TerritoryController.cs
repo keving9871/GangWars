@@ -2,24 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TerritoryController : MonoBehaviour
 {
     //Variables:
-    public PlayerController pc, pc2;
-    public GangMemberController GMC;
-    public float territoryCost;
-    public float spawnRate, captureRate;
-    public bool player1GangOwned, player2GangOwned;
-    public GameObject gangMember;
-    public Material captureMat;
-    private Material objectMat;
-    bool readyToSpawn;
-    public Color capturedColorPlayer1, capturedColorPlayer2;
-    GameObject otherPlayer;
-    GameObject thisPlayer;
+    public PlayerController pc, pc2; //Player Controllers
+    public GangMemberController GMC; //Gang Member Controllers
+    public int territoryCost; //Territory Cost in gang members
+    public float spawnRate; //How fast gang members spawn
+    public bool player1GangOwned, player2GangOwned; //Which player owns the territory or gang member
+    public GameObject gangMember; //Gang member game object
+    public Material captureMat; //Color change once a player takes a territory
+    //public Text costText, spawnableText; //Display how much a territory cost on it
+    public Transform spawnPoint;
+    private Material objectMat; //Original material on spawn for territory
+    bool readyToSpawn; //Once a territory is owned it becomes capable of spawning gang members
+    public Color capturedColorPlayer1, capturedColorPlayer2; //Corresponding colors for the player's territories
+    public TextMeshPro costTextPro, spawnableTextPro;
+    GameObject otherPlayer; //reference for the other player in code
+    GameObject thisPlayer; //reference for the current player in code
 
-    //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS
+    //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED
     //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
 
     void Start()
@@ -30,28 +34,35 @@ public class TerritoryController : MonoBehaviour
         //}
 
         objectMat = GetComponent<Renderer>().material;
-        //captureRate = 500.0f; // FUTURE TIME IT TAKES TO CAPTURE AN ENEMY LAND
         //player1GangOwned = false;
         //player2GangOwned = false;
         //ownedTerritoryListPlayer1.enabled = false;   MAKE THIS THE UI DISABLE FOR PLAYER 1
         //ownedTerritoryListPlayer2.enabled = false;   MAKE THIS THE UI DISABLE FOR PLAYER 2
 
-        if (tag == "default")
-        {
-            territoryCost = 1f;
-            spawnRate = Time.deltaTime + 5.0f;
-        }
+        //if (tag == "default")
+        //{
+        //    territoryCost = 1;
+        //    spawnRate = Time.deltaTime + 5.0f;
+        //}
 
         readyToSpawn = true;
     }
 
     void Update()
     {
+        //costText.text = territoryCost.ToString();
+        costTextPro.text = territoryCost.ToString();
+
+        if(readyToSpawn == true)
+        {
+            spawnableTextPro.text = "can spawn";
+        }
+
         if (player1GangOwned == true)
         {
             if (readyToSpawn == true)
             {
-                InvokeRepeating("Spawn", 0, 5);
+                InvokeRepeating("Spawn", 0, spawnRate);
                 readyToSpawn = false;
                 GMC.ownership = 0;
             }
@@ -68,7 +79,7 @@ public class TerritoryController : MonoBehaviour
         {
             if (readyToSpawn == true)
             {
-                InvokeRepeating("Spawn", 0, 5);
+                InvokeRepeating("Spawn", 0, spawnRate);
                 readyToSpawn = false;
                 GMC.ownership = 1;
             }
@@ -84,8 +95,8 @@ public class TerritoryController : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject thug = Instantiate(gangMember, transform.position, Quaternion.identity) as GameObject;
-
+        GameObject thug = Instantiate(gangMember, spawnPoint.position, Quaternion.identity) as GameObject;
+        
         var thugScript = thug.GetComponent<GangMemberController>();
 
         //Set their ownership on spawn:
@@ -102,6 +113,7 @@ public class TerritoryController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Get the PlayerController OnTriggerEnter
         if (other.gameObject.tag == "Player1" || other.gameObject.tag == "Player2")
         {
             pc = other.gameObject.GetComponent<PlayerController>();
@@ -118,8 +130,27 @@ public class TerritoryController : MonoBehaviour
                 {
                     player1GangOwned = true;
                     player2GangOwned = false;
+
+                    pc.reputation -= territoryCost;
+
+                    //Take the corresponding amount of gang members from that player
+                    //Use the ownedGangMembersList as a reference from the player controller!
+                    //Iterate through a loop to go through the list
+                    for (int i = 0; i > pc.ownedGangMembersList.Count; i++)
+                    {
+                        if (pc.reputation >= territoryCost)
+                        {
+                            //I am missing a reference to which gang member to destroy and remove
+                            Destroy(gangMember);
+                            pc.ownedGangMembersList.Remove(gangMember);
+                        }
+                    }
                 }
                 takeTerritory(player1GangOwned);
+            }
+            else
+            {
+                print("Can't Afford that territory!");
             }
         }
 
@@ -131,8 +162,22 @@ public class TerritoryController : MonoBehaviour
                 {
                     player1GangOwned = false;
                     player2GangOwned = true;
+
+                    pc.reputation -= territoryCost;
+
+                    for (int i = 0; i > pc.ownedGangMembersList.Count; i++)
+                    {
+                        if (pc.reputation >= territoryCost)
+                        {
+                            Destroy(gangMember);
+                        }
+                    }
                 }
                 takeTerritory(player1GangOwned);
+            }
+            else
+            {
+                print("Can't Afford that territory!");
             }
         }
 
@@ -165,7 +210,7 @@ public class TerritoryController : MonoBehaviour
 
             GameObject firstGangMember = pcThisPlayer.ownedGangMembersList[0];
             pcThisPlayer.ownedGangMembersList.Remove(firstGangMember);
-            
+            Destroy(firstGangMember);   
         }
 
         else

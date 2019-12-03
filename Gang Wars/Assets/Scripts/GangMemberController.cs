@@ -10,9 +10,14 @@ public class GangMemberController : MonoBehaviour
     public float distanceThreshold; // How close it is willing to get to something
     public int ownership; // 0 is for player 1 and 1 is for player 2
     GameObject otherPlayer;
+    public Color player1Controlled, player2Controlled;
+    private Material startingMaterial;
 
     void Start()
     {
+        //Assign the starting material to the renderer componment's material:
+        startingMaterial = GetComponent<Renderer>().material;
+
         //Fill PlayerController in the inspector:
         pc = new PlayerController();
 
@@ -30,11 +35,16 @@ public class GangMemberController : MonoBehaviour
         pc.reputation += 1;
 
         //Make sure that all gang members are added to a list:
-        if( pc != null)
+        if(pc != null)
         {
             pc.ownedGangMembersList.Add(gameObject);
         }
 
+        if (pc == null)
+        {
+            pc = GetComponent<PlayerController>();
+        }
+        //For Player one
         if (ownership == 0)
         {
             //Find the correct player:
@@ -45,6 +55,7 @@ public class GangMemberController : MonoBehaviour
             pcAlternatePlayer.ownedGangMembersList.Add(gameObject);
         }
 
+        //For Player two
         if (ownership == 1)
         {
             //Find the correct player:
@@ -60,6 +71,9 @@ public class GangMemberController : MonoBehaviour
     {
         if (ownership == 0)
         {
+            //Change color based on owner:
+            startingMaterial.color = player1Controlled;
+
             //Make them follow their owner:
             transform.LookAt(Player1.transform);
             if (Vector3.Distance(Player1.transform.position, transform.position) >= distanceThreshold)
@@ -70,6 +84,9 @@ public class GangMemberController : MonoBehaviour
 
         if (ownership == 1)
         {
+            //Change color based on owner:
+            startingMaterial.color = player2Controlled;
+
             //Make them follow their owner:
             transform.LookAt(Player2.transform);
             if (Vector3.Distance(Player2.transform.position, transform.position) >= distanceThreshold)
