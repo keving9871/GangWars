@@ -23,6 +23,7 @@ public class TerritoryController : MonoBehaviour
     GameObject otherPlayer; //reference for the other player in code
     GameObject thisPlayer; //reference for the current player in code
 
+
     //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED
     //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
 
@@ -32,6 +33,9 @@ public class TerritoryController : MonoBehaviour
         //{
         //    pc.ownedTerritoryList.Add(gameObject);
         //}
+
+        pc.reputation = 1;
+        pc2.reputation = 2;
 
         objectMat = GetComponent<Renderer>().material;
         //player1GangOwned = false;
@@ -50,7 +54,6 @@ public class TerritoryController : MonoBehaviour
 
     void Update()
     {
-        //costText.text = territoryCost.ToString();
         costTextPro.text = territoryCost.ToString();
 
         if(readyToSpawn == true)
@@ -102,11 +105,13 @@ public class TerritoryController : MonoBehaviour
         //Set their ownership on spawn:
         if (player1GangOwned == true)
         {
+            pc.reputation += 1;
             thugScript.ownership = 0;
         }
 
         if (player2GangOwned == true)
         {
+            pc2.reputation += 1;
             thugScript.ownership = 1;
         }
     }
@@ -124,34 +129,34 @@ public class TerritoryController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player1")
         {
+            Debug.Log("Player 1 is staying");
             if (Input.GetKeyDown(pc.purchaseKey))
             {
+                Debug.Log("Purchase Key pressed!");
                 if (pc.reputation >= territoryCost)
                 {
+                    Debug.Log("Reputation > Territory Cost");
                     player1GangOwned = true;
                     player2GangOwned = false;
 
-                    pc.reputation = pc.reputation - this.territoryCost; // Take the reputation a territory cost after purchase
+                    pc.reputation -= territoryCost; // Take the reputation a territory cost after purchase
 
                     //Take the corresponding amount of gang members from that player
                     //Use the ownedGangMembersList as a reference from the player controller!
                     //Iterate through a loop to go through the list
-                    for (int i = 0; i > pc.ownedGangMembersList.Count; i++)
+                    for (int i = territoryCost - 1; i > 0; i--)
                     {
-                        if (pc.reputation >= territoryCost)
-                        {
-                            //I am missing a reference to which gang member to destroy and remove
-                            Destroy(gangMember);
-                            pc.ownedGangMembersList.Remove(gangMember);
-                        }
+                        GameObject member = pc.ownedGangMembersList[i];
+                        pc.ownedGangMembersList.Remove(member);
+                        Destroy(member);
+                        //if (i <= territoryCost)
+                        //{
+                        //    Destroy(gangMember);
+                        //    pc.ownedGangMembersList.Remove(gangMember);
+                        //}
                     }
                 }
                 takeTerritory(player1GangOwned);
-                pc.reputation = pc.reputation - this.territoryCost;
-            }
-            else
-            {
-                print("Can't Afford that territory!");
             }
         }
 
@@ -159,27 +164,24 @@ public class TerritoryController : MonoBehaviour
         {
             if (Input.GetKeyDown(pc.purchaseKey))
             {
-                if (pc.reputation >= territoryCost)
+                if (pc2.reputation >= territoryCost)
                 {
                     player1GangOwned = false;
                     player2GangOwned = true;
 
-                    pc2.reputation = pc.reputation - this.territoryCost; // // Take the reputation a territory cost after purchase
+                    pc2.reputation = pc2.reputation - this.territoryCost; // // Take the reputation a territory cost after purchase
 
-                    for (int i = 0; i > pc.ownedGangMembersList.Count; i++)
+                    for (int i = territoryCost - 1; i >= 0; i--)
                     {
-                        if (pc.reputation >= territoryCost)
+                        pc2.ownedGangMembersList.Remove(pc2.ownedGangMembersList[pc2.ownedGangMembersList.Count - 1]);
+                        if (i <= territoryCost)
                         {
                             Destroy(gangMember);
+                            pc2.ownedGangMembersList.Remove(gangMember);
                         }
                     }
                 }
                 takeTerritory(player1GangOwned);
-                pc2.reputation = pc.reputation - this.territoryCost;
-            }
-            else
-            {
-                print("Can't Afford that territory!");
             }
         }
     }
@@ -198,7 +200,7 @@ public class TerritoryController : MonoBehaviour
         //if owned by player one, other player = player2
         if (player1Owned)
         {
-            pc.reputation = pc.reputation - this.territoryCost;
+            //pc.reputation = pc.reputation - this.territoryCost;
             otherPlayer = GameObject.FindWithTag("Player2");
             var pcOtherPlayer = otherPlayer.GetComponent<PlayerController>();
             thisPlayer = GameObject.FindWithTag("Player1");
@@ -217,7 +219,7 @@ public class TerritoryController : MonoBehaviour
 
         else
         {
-            pc.reputation = pc.reputation - this.territoryCost;
+            //pc.reputation = pc.reputation - this.territoryCost;
             otherPlayer = GameObject.FindWithTag("Player1");
             var pcAlternatePlayer = otherPlayer.GetComponent<PlayerController>();
 

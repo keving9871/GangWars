@@ -32,7 +32,7 @@ public class GangMemberController : MonoBehaviour
         distanceThreshold = 2f;
 
         //Each gang member adds this much reputation to their owner:
-        pc.reputation += 1;
+        //pc.reputation += 1;
 
         //Make sure that all gang members are added to a list:
         if(pc != null)

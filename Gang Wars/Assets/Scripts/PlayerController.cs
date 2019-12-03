@@ -33,9 +33,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Update Reputation:
-        reputation = ownedGangMembersList.Count;
-
         //Display Reputation:
         currentReputation.text = "Reputation: " + reputation.ToString();
 
