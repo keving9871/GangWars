@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Kevin's Scene.unity
+    guid: 258838361da944843bfec100f1bb8e0e
   m_configObjects: {}

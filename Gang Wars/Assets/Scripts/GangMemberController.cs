@@ -19,7 +19,8 @@ public class GangMemberController : MonoBehaviour
         startingMaterial = GetComponent<Renderer>().material;
 
         //Fill PlayerController in the inspector:
-        pc = new PlayerController();
+        //pc = new PlayerController();
+        //pc = gameObject.AddComponent<PlayerController>();
 
         //Fill Player1 in the inspector:
         Player1 = GameObject.FindWithTag("Player1");

@@ -216,6 +216,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4650713252218707821, guid: f5e728611f5734a8f87f6bb25e18a898,
         type: 3}
+    - target: {fileID: 4385636403517156079, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 3889371067034531601, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
         type: 3}
       propertyPath: m_Mesh
@@ -295,6 +300,7 @@ RectTransform:
   - {fileID: 549564186}
   - {fileID: 335831753}
   - {fileID: 842269314}
+  - {fileID: 910663939}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -462,6 +468,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -785,6 +796,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -907,6 +923,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -1120,6 +1141,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -1195,12 +1221,14 @@ MonoBehaviour:
   reputation: 0
   moveSpeed: 2000
   rb: {fileID: 435780388}
+  isPlayer1: 1
   ownedTerritoryList: []
   ownedGangMembersList: []
   currentReputation: {fileID: 549564187}
   forward: 119
   back: 115
   purchaseKey: 101
+  stockpileKey: 113
   left: 97
   right: 100
 --- !u!136 &435780390
@@ -1414,6 +1442,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -1625,6 +1658,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -2199,6 +2237,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -2228,6 +2271,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1713284905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &910663938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910663939}
+  - component: {fileID: 910663941}
+  - component: {fileID: 910663940}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &910663939
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910663938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 218647509}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &910663940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910663938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &910663941
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910663938}
+  m_CullTransparentMesh: 0
 --- !u!1 &954869455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,6 +2602,11 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -2712,6 +2837,11 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -2840,6 +2970,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -2962,6 +3097,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -3360,6 +3500,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -3482,6 +3627,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -3609,6 +3759,16 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: homebase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -3844,6 +4004,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -4086,6 +4251,11 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -4208,6 +4378,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -4330,6 +4505,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -4529,6 +4709,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -4651,6 +4836,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -4773,6 +4963,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -5065,12 +5260,14 @@ MonoBehaviour:
   reputation: 0
   moveSpeed: 2000
   rb: {fileID: 1877378067}
+  isPlayer1: 0
   ownedTerritoryList: []
   ownedGangMembersList: []
   currentReputation: {fileID: 335831754}
   forward: 273
   back: 274
-  purchaseKey: 13
+  purchaseKey: 303
+  stockpileKey: 47
   left: 276
   right: 275
 --- !u!136 &1877378069
@@ -5323,6 +5520,11 @@ PrefabInstance:
       propertyPath: territoryCost
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -5376,11 +5578,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLimit: 10
+  gameOverText: {fileID: 910663940}
   player1WinText: {fileID: 842044920}
   player2WinText: {fileID: 1924490519}
-  tieText: {fileID: 1857987531}
   timeLeftText: {fileID: 1575165969}
   time: 150
+  tc: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314, type: 3}
 --- !u!4 &2012349479
 Transform:
   m_ObjectHideFlags: 0
@@ -5511,6 +5714,16 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: homebase
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5885010524229767022, guid: 98659a7347ff14af1b0fcf22b235b314,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 6381313244715913872, guid: 98659a7347ff14af1b0fcf22b235b314,
         type: 3}
       propertyPath: m_Mesh
@@ -5607,27 +5820,10 @@ PrefabInstance:
       objectReference: {fileID: 1877378068}
     - target: {fileID: 4385636403517156079, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
         type: 3}
-      propertyPath: GMC
+      propertyPath: gm
       value: 
-      objectReference: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-    - target: {fileID: 4385636403517156079, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
-        type: 3}
-      propertyPath: gangMember
-      value: 
-      objectReference: {fileID: 4650713252218707821, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
+      objectReference: {fileID: 2012349478}
     - target: {fileID: 3889371067034531601, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3129652386913639975, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 684702449856285431, guid: cd2a05ac59e4c4bd1aaeafb29e41f4c8,
         type: 3}
       propertyPath: m_Mesh
       value: 

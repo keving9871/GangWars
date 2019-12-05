@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public int reputation;
     public float moveSpeed;
     public Rigidbody rb;
+    public bool isPlayer1;
     public List<GameObject> ownedTerritoryList = new List<GameObject>(); //HERES THE LIST FOR TERRITORIES
     public List<GameObject> ownedGangMembersList = new List<GameObject>(); // Here's the list for gang members
 
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode forward;
     public KeyCode back;
     public KeyCode purchaseKey;
+    public KeyCode stockpileKey;
     public KeyCode left;
     public KeyCode right;
 
@@ -35,6 +37,12 @@ public class PlayerController : MonoBehaviour
     {
         //Display Reputation:
         currentReputation.text = "Reputation: " + reputation.ToString();
+
+        //Make sure that reputation is never negative:
+        if(reputation < 0)
+        {
+            reputation = 0;
+        }
 
         //Control Movement:
         if (Input.GetKey(forward))

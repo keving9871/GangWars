@@ -20,6 +20,8 @@ public class TerritoryController : MonoBehaviour
     public Color capturedColorPlayer1, capturedColorPlayer2; //Corresponding colors for the player's territories
     public TextMeshPro costTextPro, type; //Texts for territory costs and type of territory
     GameObject otherPlayer; //reference for the other player in code
+    public bool homebase;
+    public GameManager gm;
 
     //  REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED
     //  TERRITORY COST IS HOW MUCH THE PLAYER NEEDS
@@ -39,43 +41,16 @@ public class TerritoryController : MonoBehaviour
 
     void Update()
     {
+        //Prevent the cost of territory from being negative:
+        if(territoryCost < 0)
+        {
+            territoryCost = 0;
+        }
+
         costTextPro.text = territoryCost.ToString(); //Sets the cost text to whatever the territory cost is
 
-        if (player1GangOwned == true) //check if this territory belongs to player 1
-        {
-            //spawns a player 1 gang member
-            if (readyToSpawn == true)
-            {
-                InvokeRepeating("Spawn", 0, spawnRate); //waits the spawnRate in seconds then sets ready to spawn to true
-                readyToSpawn = false; //set ready to spawn back to false to wait for the repeat again
-                GMC.ownership = 0; //make the spawned gang member belong to player 1
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                //ownedTerritoryList.enabled = true; // MAKE THIS THE UI ENABLE FOR PLAYER 1
-            }
-
-            objectMat.color = capturedColorPlayer1; //change the color of the captured territory to correspond to player 1
-        }
-
-        if (player2GangOwned == true) //check if this territory belongs to player 2
-        {
-            //spawns a player 2 gang member
-            if (readyToSpawn == true)
-            {
-                InvokeRepeating("Spawn", 0, spawnRate); //waits the spawnRate in seconds then sets ready to spawn to true
-                readyToSpawn = false; //set ready to spawn back to false
-                GMC.ownership = 1; //make the spawned gang member belong to player 2
-            }
-
-            if (Input.GetKey(KeyCode.RightShift))
-            {
-                //ownedTerritoryListPlayer2.enabled = true; // MAKE THIS THE UI ENABLE FOR PLAYER 2
-            }
-
-            objectMat.color = capturedColorPlayer2; //change the color of the captured territory to correspond to player 2
-        }
+        SpawnMethod(player1GangOwned, 0, capturedColorPlayer1);
+        SpawnMethod(player2GangOwned, 1, capturedColorPlayer2);
     }
 
     private void Spawn()
@@ -109,62 +84,82 @@ public class TerritoryController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player1") //if this is player 1
+        if (other.gameObject.tag == "Player1" &&  pc.isPlayer1)
         {
+            //Stockpile Mechanic:
+            if (Input.GetKeyDown(pc.stockpileKey)) //Did they press Q:
+            {
+                territoryCost += 1;
+                pc.reputation -= 1;
+            }
+
             if (Input.GetKeyDown(pc.purchaseKey)) //Did they press E:
             {
                 if (pc.reputation >= territoryCost) // if they have more reputation than the territory costs:
                 {
-                    if (pc.ownedGangMembersList.Count >= 1 && pc.reputation >= 1) //if they have at least one gang member and reputation:
+                    pc.reputation -= territoryCost;
+
+                    //Win condition:
+                    if (homebase == true)
+                    {
+                        gm.gameOver(0);
+                        homebase = false;
+                    }
+
+                    if (pc.ownedGangMembersList.Count >= 0 && pc.reputation >= 0) //if they have at least one gang member and reputation:
                     {
                         player1GangOwned = true; //if player 1 buys it set the bool to their ownership
                         player2GangOwned = false; //if player 1 buys it set the bool to false for player 2 owned
 
-                        pc.reputation -= territoryCost; // Take the reputation a territory cost after purchase
-                        territoryCost -= pc.reputation; // Take the reputation and lower the cost of the territory accordingly
+                        //Iterate through a loop to go through the list backwards:
+                        for (int i = territoryCost - 1; i > 0; i--)
+                        {
+                            GameObject member = pc.ownedGangMembersList[i]; //Store a reference to the gang members you want in i (equal to territory cost)
+                            pc.ownedGangMembersList.Remove(member); //Take the corresponding amount of gang members from that player
+                            Destroy(member); //Destroy those gang members in the scene
+                        }
+                        takeTerritory(pc.isPlayer1);
+                    }
+                }
+            }
+        }
+
+        if (other.gameObject.tag == "Player2" && !pc.isPlayer1)
+        {
+            //Stockpile Mechanic:
+            if (Input.GetKeyDown(pc.stockpileKey)) //Did they press /
+            {
+                territoryCost += 1;
+                pc.reputation -= 1;
+            }
+
+            if (Input.GetKeyDown(pc.purchaseKey)) //Did they press E:
+            {
+                if (pc.reputation >= territoryCost) // if they have more reputation than the territory costs:
+                {
+                    pc.reputation -= territoryCost;
+
+                    //Win condition:
+                    if (homebase == true)
+                    {
+                        gm.gameOver(1);
+                        homebase = false;
+                    }
+                   
+                    if (pc.ownedGangMembersList.Count >= 0 && pc.reputation >= 0) //if they have at least one gang member and reputation:
+                    {
+                        player1GangOwned = false; //if player 1 buys it set the bool to their ownership
+                        player2GangOwned = true; //if player 1 buys it set the bool to false for player 2 owned
 
                         //Iterate through a loop to go through the list backwards:
                         for (int i = territoryCost - 1; i > 0; i--)
                         {
-                            //if (i <= territoryCost) //I don't know what this if statement was but I don't think its important
-                            //{
-                                GameObject member = pc.ownedGangMembersList[i]; //Store a reference to the gang members you want in i (equal to territory cost)
-                                pc.ownedGangMembersList.Remove(member); //Take the corresponding amount of gang members from that player
-                                Destroy(member); //Destroy those gang members in the scene
-                            //}
+                            GameObject member = pc.ownedGangMembersList[i]; //Store a reference to the gang members you want in i (equal to territory cost)
+                            pc.ownedGangMembersList.Remove(member); //Take the corresponding amount of gang members from that player
+                            Destroy(member); //Destroy those gang members in the scene
                         }
+                        takeTerritory(pc.isPlayer1);
                     }
-                }
-                takeTerritory(player1GangOwned); //Run takeTerritory method and return player1GangOwned
-            }
-        }
-
-        if (other.gameObject.tag == "Player2")
-        {
-            if (Input.GetKeyDown(pc.purchaseKey)) //return/enter
-            {
-                if (pc2.reputation >= territoryCost) //if the player has more reputation than the cost run this block
-                {
-                    if (pc.ownedGangMembersList.Count >= 1 && pc.reputation >= 1) //if they have at least one gang member and reputation:
-                    {
-                        player1GangOwned = false; //set this territory to not owned by player 1 bool
-                        player2GangOwned = true; //set this bool to true for player 2 owned
-
-                        pc2.reputation -= territoryCost; // Take the reputation a territory cost after purchase
-                        territoryCost -= pc2.reputation; // Take the reputation and lower the cost of the territory accordingly
-
-                        //Iterate through a loop to go through the list backwards:
-                        for (int i = territoryCost - 1; i >= 0; i--)
-                        {
-                            //if (i <= territoryCost) //idk what this if statement was but i don't think it was important
-                            //{
-                                GameObject member = pc2.ownedGangMembersList[i]; //Store a reference to the gang members you want in i (equal to territory cost)
-                                pc2.ownedGangMembersList.Remove(member); //Take the corresponding amount of gang members from that player
-                                Destroy(member); //Destroy those gang members in the scene
-                            //}
-                        }
-                    }
-                    takeTerritory(player1GangOwned);
                 }
             }
         }
@@ -205,6 +200,22 @@ public class TerritoryController : MonoBehaviour
                 //remove this territory from their list:
                 pcAlternatePlayer.ownedTerritoryList.Remove(gameObject);
             }
+        }
+    }
+
+    void SpawnMethod(bool check, int index, Color color)
+    {
+
+        if (check)
+        {
+            if (readyToSpawn)
+            {
+                InvokeRepeating("Spawn", 0, spawnRate);
+                readyToSpawn = false;
+                GMC.ownership = index;
+            }
+
+            objectMat.color = color;
         }
     }
 }

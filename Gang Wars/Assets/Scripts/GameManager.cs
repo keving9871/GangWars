@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -8,49 +9,55 @@ public class GameManager : MonoBehaviour
 {
     public float timeLimit;
     private float currentTime;
-    private int player1TerritoriesOwned, player2TerritoriesOwned;
+    public Text gameOverText;
     public Text player1WinText;
     public Text player2WinText;
-    public Text tieText;
     public Text timeLeftText;
     public float time;
+    public TerritoryController tc;
 
     void Start()
     {
-        player1WinText.enabled = false;
-        player2WinText.enabled = false;
-        tieText.enabled = false;
+        //player1WinText.enabled = false;
+        gameOverText.enabled = true;
+        //player2WinText.enabled = true;
         timeLeftText.enabled = true;
-        transform.localScale = new Vector3(1, 1, 1);
-        Invoke("gameOver", time);
+        //transform.localScale = new Vector3(1, 1, 1);
+        //Invoke("gameOver", time);
+        gameOverText.text = "";
     }
 
 
     void Update()
     {
-
-        //currentTime = Time.deltaTime;
-        //currentTime = Mathf.Round(currentTime);
-
         int _time = Mathf.FloorToInt(time -= Time.deltaTime);
         timeLeftText.text = "Time Left: " + (_time.ToString());
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1;
+        }
     }
 
-    void gameOver()
+    public void gameOver(int whoWon)
     {
-       // print("Game Over");
-        if (player1TerritoriesOwned > player2TerritoriesOwned)
+        if (whoWon == 0)
         {
-            player1WinText.enabled = true;
+            print("Who Won == 0");
+            //print(player1WinText.enabled);
+            //player1WinText.enabled = true;
+            gameOverText.text = "Player 1 Wins!";
         }
-        if (player1TerritoriesOwned == player2TerritoriesOwned)
+
+        if(whoWon == 1)
         {
-            tieText.enabled = true;
+            print("Who won == 1");
+            gameOverText.text = "Player 2 Wins!";
+
+            //player2WinText.enabled = true;
         }
-        if (player1TerritoriesOwned < player2TerritoriesOwned)
-        {
-            player2WinText.enabled = true;
-        }
+
         Time.timeScale = 0f;
     }
 }
