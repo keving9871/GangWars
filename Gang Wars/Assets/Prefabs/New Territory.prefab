@@ -514,8 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 966bf42946a09474bb637ba23c2004f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pc: {fileID: 0}
-  pc2: {fileID: 0}
+  pc: {fileID: 4847226812852978273, guid: 23af634f781be406b81085673fbca1df, type: 3}
+  pc2: {fileID: 4683484026685418077, guid: 5b3a815e83a6547ed9b907c08c3ca133, type: 3}
   GMC: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898, type: 3}
   territoryCost: 5
   spawnRate: 1
