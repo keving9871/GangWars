@@ -516,18 +516,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pc: {fileID: 0}
   pc2: {fileID: 0}
-  GMC: {fileID: 0}
+  GMC: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898, type: 3}
   territoryCost: 5
   spawnRate: 1
   player1GangOwned: 0
   player2GangOwned: 0
-  gangMember: {fileID: 0}
+  gangMember: {fileID: 4650713252218707821, guid: f5e728611f5734a8f87f6bb25e18a898,
+    type: 3}
   captureMat: {fileID: 2100000, guid: d2985de4f27bfa340a12c3ef95d47167, type: 2}
   spawnPoint: {fileID: 5430037440053573042}
   capturedColorPlayer1: {r: 0.1702118, g: 0.57847744, b: 0.7075472, a: 0}
   capturedColorPlayer2: {r: 0.65144956, g: 0.37254903, b: 0.972549, a: 0}
   costTextPro: {fileID: 1536171571584945871}
   type: {fileID: 0}
+  homebase: 0
+  gm: {fileID: 5375035826381534421, guid: 79781c55a885849f2a637bd8413b9561, type: 3}
 --- !u!1 &8977077557173158851
 GameObject:
   m_ObjectHideFlags: 0
