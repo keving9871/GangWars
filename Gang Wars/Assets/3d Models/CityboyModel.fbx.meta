@@ -3,7 +3,32 @@ guid: e57ebc019d45ea04da68609a2a31ff5f
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Winter_Boots1_Boots_Mat
+    second: {fileID: 2100000, guid: dd4a52e639f771a4abe6269e0474cec5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Winter_Boots2_Boots_Mat
+    second: {fileID: 2100000, guid: dd4a52e639f771a4abe6269e0474cec5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Polo_Pants_v2_L3_PoloPants_cloth1
+    second: {fileID: 2100000, guid: 75413dcd92468ed4baa5def5356f56b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Polo_Team_Shirt_v2_L3_PoloTeamShirt_button2
+    second: {fileID: 2100000, guid: 1032d41f900276c40a9dd24f55b7d420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Polo_Team_Shirt_v2_L3_PoloTeamShirt_cloth2
+    second: {fileID: 2100000, guid: fed4e78bda2b3de45954637fee164b8c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -23,7 +48,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -84,10 +109,10 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
