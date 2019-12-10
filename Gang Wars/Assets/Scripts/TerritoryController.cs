@@ -91,6 +91,13 @@ public class TerritoryController : MonoBehaviour
             {
                 territoryCost += 1;
                 pc.reputation -= 1;
+                if (pc.reputation > 0)
+                {
+                    GameObject member = pc.ownedGangMembersList[pc.ownedGangMembersList.Count - 1];
+                    pc.ownedGangMembersList.Remove(member);
+                    Destroy(member);
+
+                }
             }
 
             if (Input.GetKeyDown(pc.purchaseKey)) //Did they press E:

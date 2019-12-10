@@ -14,58 +14,66 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.34" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="119" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="119" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2968">
-              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state relative-caret-position="512">
+              <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
               <folding>
-                <marker date="1575407765393" expanded="false" signature="6:113" ph="..." />
-                <marker date="1575407765393" expanded="true" signature="163:7940" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="1252:1412" ph="/* REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED ... */" />
-                <marker date="1575407765393" expanded="true" signature="1430:2028" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="1445:1539" ph="/* if (pc != null) ... */" />
-                <marker date="1575407765393" expanded="true" signature="1604:1992" ph="/* player1GangOwned = false; ... */" />
-                <marker date="1575407765393" expanded="true" signature="2047:3229" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="2192:2263" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="2302:2737" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="2350:2507" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="2553:2674" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="2776:3223" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="2824:2981" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="3032:3160" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="3255:3685" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="3524:3582" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="3621:3679" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="3734:3968" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="3874:3962" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="4016:6353" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="4069:5390" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="4129:5280" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="4195:5149" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="4454:4680" ph="/* Take the corresponding amount of gang members from that player ... */" />
-                <marker date="1575407765393" expanded="true" signature="4756:5131" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="4838:5109" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="5297:5380" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="5438:6347" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="5498:6237" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="5564:6105" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="5882:6087" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="5964:6065" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="6254:6337" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="6403:7938" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="6545:6664" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="6748:7514" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="7169:7312" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="7528:7932" ph="{...}" />
-                <marker date="1575407765393" expanded="true" signature="7821:7922" ph="{...}" />
+                <marker date="1576013255734" expanded="false" signature="6:113" ph="..." />
+                <marker date="1576013255734" expanded="true" signature="163:9242" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="1231:1391" ph="/* REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED ... */" />
+                <marker date="1576013255734" expanded="true" signature="1409:1767" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="1786:2178" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="1883:1934" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="2204:2995" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="2557:2753" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="2792:2989" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3044:3305" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3211:3299" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3353:7305" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3423:5456" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3538:3911" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3663:3897" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="3982:5446" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="4106:5432" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="4256:4382" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="4521:5414" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="4911:5339" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="5521:7299" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="5635:5735" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="5806:7289" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="5930:7275" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="6080:6206" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="6364:7257" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="6754:7182" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="7440:8901" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="7576:7664" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="7748:8323" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="8146:8313" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="8369:8895" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="8727:8885" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="8959:9240" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="8985:9234" ph="{...}" />
+                <marker date="1576013255734" expanded="true" signature="9025:9186" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -79,16 +87,23 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="947" />
     <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -99,10 +114,10 @@
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,11 +164,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575407659840</updated>
       <workItem from="1575407676619" duration="1089000" />
+      <workItem from="1576011756915" duration="2051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1089000" />
+    <option name="totallyTimeSpent" value="3140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -165,19 +181,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="758" y="0" width="784" height="830" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5207182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -185,12 +194,20 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,48 +231,45 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2968">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="512">
+          <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
           <folding>
-            <marker date="1575407765393" expanded="false" signature="6:113" ph="..." />
-            <marker date="1575407765393" expanded="true" signature="163:7940" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="1252:1412" ph="/* REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED ... */" />
-            <marker date="1575407765393" expanded="true" signature="1430:2028" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="1445:1539" ph="/* if (pc != null) ... */" />
-            <marker date="1575407765393" expanded="true" signature="1604:1992" ph="/* player1GangOwned = false; ... */" />
-            <marker date="1575407765393" expanded="true" signature="2047:3229" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="2192:2263" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="2302:2737" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="2350:2507" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="2553:2674" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="2776:3223" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="2824:2981" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="3032:3160" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="3255:3685" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="3524:3582" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="3621:3679" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="3734:3968" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="3874:3962" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="4016:6353" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="4069:5390" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="4129:5280" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="4195:5149" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="4454:4680" ph="/* Take the corresponding amount of gang members from that player ... */" />
-            <marker date="1575407765393" expanded="true" signature="4756:5131" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="4838:5109" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="5297:5380" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="5438:6347" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="5498:6237" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="5564:6105" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="5882:6087" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="5964:6065" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="6254:6337" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="6403:7938" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="6545:6664" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="6748:7514" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="7169:7312" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="7528:7932" ph="{...}" />
-            <marker date="1575407765393" expanded="true" signature="7821:7922" ph="{...}" />
+            <marker date="1576013255734" expanded="false" signature="6:113" ph="..." />
+            <marker date="1576013255734" expanded="true" signature="163:9242" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="1231:1391" ph="/* REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED ... */" />
+            <marker date="1576013255734" expanded="true" signature="1409:1767" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="1786:2178" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="1883:1934" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="2204:2995" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="2557:2753" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="2792:2989" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3044:3305" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3211:3299" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3353:7305" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3423:5456" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3538:3911" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3663:3897" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="3982:5446" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="4106:5432" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="4256:4382" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="4521:5414" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="4911:5339" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="5521:7299" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="5635:5735" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="5806:7289" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="5930:7275" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="6080:6206" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="6364:7257" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="6754:7182" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="7440:8901" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="7576:7664" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="7748:8323" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="8146:8313" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="8369:8895" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="8727:8885" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="8959:9240" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="8985:9234" ph="{...}" />
+            <marker date="1576013255734" expanded="true" signature="9025:9186" ph="{...}" />
           </folding>
         </state>
       </provider>
