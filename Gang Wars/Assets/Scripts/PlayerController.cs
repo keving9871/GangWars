@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> ownedTerritoryList = new List<GameObject>(); //HERES THE LIST FOR TERRITORIES
     public List<GameObject> ownedGangMembersList = new List<GameObject>(); // Here's the list for gang members
 
+    public Animator cityBoyAnimController;
+    public Animation swampBoyAnimController;
+    
     //UI:
     public Text currentReputation;
     //public Text player1GangMembersListText;
@@ -31,10 +35,15 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         //player1GangMembersListText.enabled = false;
         //player2GangMembersListText.enabled = false;
+        
+        cityBoyAnimController.SetBool("Idle", true);
+        cityBoyAnimController.SetBool("RunningForward", false);
+        cityBoyAnimController.SetBool("RunningBackward", false);
     }
 
     void Update()
     {
+        
         //Display Reputation:
         currentReputation.text = "Reputation: " + reputation.ToString();
 
@@ -48,16 +57,23 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(forward))
         {
             rb.velocity = this.transform.forward * moveSpeed * Time.deltaTime;
+            cityBoyAnimController.SetBool("RunningForward",true);
+            cityBoyAnimController.SetBool("Idle", false);
         }
 
         if (Input.GetKey(back))
         {
             rb.velocity = this.transform.forward * -moveSpeed * Time.deltaTime;
+            cityBoyAnimController.SetBool("RunningBackward",true);
+            cityBoyAnimController.SetBool("Idle", false);
         }
 
         if (!Input.GetKey(forward) && !Input.GetKey(back))
         {
             rb.velocity = this.transform.forward * 0;
+            cityBoyAnimController.SetBool("RunningForward", false);
+            cityBoyAnimController.SetBool("RunningBackward", false);
+            cityBoyAnimController.SetBool("Idle", true);
         }
 
         if (Input.GetKey(left))
