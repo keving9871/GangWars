@@ -1,126 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9a0214e-d2af-4195-815b-5235d39a1806" name="Default Changelist" comment="" />
+    <list default="true" id="e9a0214e-d2af-4195-815b-5235d39a1806" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gang Wars/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gang Wars/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gang Wars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gang Wars/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimatorControllers/CityBoyController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimatorControllers/CityBoyController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CityBoyModel@Breakdance Ready.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CityBoyModel@Breakdance Ready.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CityBoyModel@Running.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CityBoyModel@Running.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Isiah's Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Isiah's Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-38614804">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cs" value="119" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="C#" value="119" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
-              <folding>
-                <marker date="1576013255734" expanded="false" signature="6:113" ph="..." />
-                <marker date="1576013255734" expanded="true" signature="163:9242" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="1231:1391" ph="/* REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED ... */" />
-                <marker date="1576013255734" expanded="true" signature="1409:1767" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="1786:2178" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="1883:1934" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="2204:2995" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="2557:2753" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="2792:2989" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3044:3305" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3211:3299" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3353:7305" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3423:5456" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3538:3911" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3663:3897" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="3982:5446" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="4106:5432" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="4256:4382" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="4521:5414" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="4911:5339" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="5521:7299" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="5635:5735" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="5806:7289" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="5930:7275" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="6080:6206" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="6364:7257" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="6754:7182" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="7440:8901" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="7576:7664" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="7748:8323" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="8146:8313" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="8369:8895" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="8727:8885" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="8959:9240" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="8985:9234" ph="{...}" />
-                <marker date="1576013255734" expanded="true" signature="9025:9186" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GangMemberController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="947" />
-    <option name="width" value="980" />
-    <option name="height" value="1038" />
-  </component>
+  <component name="ProjectId" id="1Uo6OndJmo4CPrfne6yMr0q2vm1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -139,13 +53,17 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <list>
@@ -164,59 +82,28 @@
       <option name="presentableId" value="Default" />
       <updated>1575407659840</updated>
       <workItem from="1575407676619" duration="1089000" />
-      <workItem from="1576011756915" duration="2051000" />
+      <workItem from="1576010578291" duration="1557000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3140000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="758" y="0" width="784" height="830" extended-state="1" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5207182" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -227,52 +114,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
-          <folding>
-            <marker date="1576013255734" expanded="false" signature="6:113" ph="..." />
-            <marker date="1576013255734" expanded="true" signature="163:9242" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="1231:1391" ph="/* REPUTATION IS HOW MUCH CURRENCY THE PLAYER HAS AND IS DIRECTLY LINKED TO HOW MANY GANG MEMBERS ARE OWNED ... */" />
-            <marker date="1576013255734" expanded="true" signature="1409:1767" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="1786:2178" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="1883:1934" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="2204:2995" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="2557:2753" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="2792:2989" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3044:3305" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3211:3299" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3353:7305" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3423:5456" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3538:3911" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3663:3897" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="3982:5446" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="4106:5432" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="4256:4382" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="4521:5414" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="4911:5339" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="5521:7299" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="5635:5735" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="5806:7289" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="5930:7275" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="6080:6206" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="6364:7257" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="6754:7182" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="7440:8901" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="7576:7664" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="7748:8323" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="8146:8313" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="8369:8895" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="8727:8885" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="8959:9240" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="8985:9234" ph="{...}" />
-            <marker date="1576013255734" expanded="true" signature="9025:9186" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

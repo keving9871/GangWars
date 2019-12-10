@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\demok\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\demok\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Gang Wars.-2065359329.00" t="ExcludeRecursive" />
-    <e p="C:\Users\demok\OneDrive\Documents\GangWars\Gang Wars" t="IncludeRecursive">
+    <e p="C:\Users\zker4\.Rider2019.2\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\zker4\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\zker4\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Gang Wars.1297582144.00" t="ExcludeRecursive" />
+    <e p="C:\Users\zker4\OneDrive\Documents\Unity\MajorStudioFall2019\GangWars\Gang Wars" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -315,12 +316,9 @@
         </e>
       </e>
       <e p="Gang Wars.sln" t="IncludeFlat" />
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
