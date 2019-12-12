@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public Animator cityBoyAnimController;
     public Animator swampBoyAnimController;
     
+    public AudioSource _thisAudioSource;
+    public AudioSource _P2AudioSource;
+    
     //UI:
     public Text currentReputation;
     //public Text player1GangMembersListText;
@@ -122,11 +125,13 @@ public class PlayerController : MonoBehaviour
         {
             //Add the list to the text object
             //player1GangMembersListText.enabled = true;
+            _thisAudioSource.Play();
         }
         if (Input.GetKey(KeyCode.Slash))
         {
             //Add the list to the text object
             //player2GangMembersListText.enabled = true;
+            _P2AudioSource.Play();
         }
     }
 

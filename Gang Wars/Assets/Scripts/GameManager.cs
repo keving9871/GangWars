@@ -38,6 +38,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(0);
             Time.timeScale = 1;
         }
+
+        if (_time <= 7f)
+        {
+            GameObject.Find("EndFX.Source").GetComponent<AudioSource>().Play();
+        }
     }
 
     public void gameOver(int whoWon)
