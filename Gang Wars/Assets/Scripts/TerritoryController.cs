@@ -105,6 +105,7 @@ public class TerritoryController : MonoBehaviour
                 if (pc.reputation >= territoryCost) // if they have more reputation than the territory costs:
                 {
                     pc.reputation -= territoryCost;
+                    this.GetComponent<AudioSource>().Play();
 
                     //Win condition:
                     if (homebase == true)
