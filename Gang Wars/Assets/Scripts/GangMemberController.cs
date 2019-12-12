@@ -13,15 +13,13 @@ public class GangMemberController : MonoBehaviour
     public Color player1Controlled, player2Controlled;
     private Material startingMaterial;
 
-    public MeshRenderer gangMemberShirt;
+    public Renderer gangMemberShirt;
     private Material shirtColor;
 
     public Animator gangMemberController;
     void Start()
     {
         //Assign the starting material to the renderer componment's material:
-        gangMemberShirt = GetComponent<MeshRenderer>();
-
         //Fill PlayerController in the inspector:
         //pc = new PlayerController();
         //pc = gameObject.AddComponent<PlayerController>();
@@ -35,6 +33,7 @@ public class GangMemberController : MonoBehaviour
         //Set MoveSpeed and DistanceThreshold:
         moveSpeed = 4f;
         distanceThreshold = 2f;
+        shirtColor = gangMemberShirt.material;
 
         //Each gang member adds this much reputation to their owner:
         //pc.reputation += 1;
@@ -78,17 +77,25 @@ public class GangMemberController : MonoBehaviour
         {
             //Change color based on owner:
             /*startingMaterial.color = player1Controlled;*/
-            shirtColor = gangMemberShirt.material;
-            shirtColor.SetColor("_Color", player1Controlled);
+/*            shirtColor = gangMemberShirt.material;
+            Debug.Log(shirtColor.GetColor("_Color"));
+            shirtColor.SetColor("_Color", player1Controlled);*/
 
+            shirtColor.SetColor("_Color", player1Controlled);
             //Make them follow their owner:
             transform.LookAt(Player1.transform);
-            if (Vector3.Distance(Player1.transform.position, transform.position) >= distanceThreshold)
+            if (Vector3.Distance(Player1.transform.position, transform.position) > distanceThreshold)
             {
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
                 
                 gangMemberController.SetBool("RunningForward",true);
                 gangMemberController.SetBool("Idle", false);
+            }
+
+            else
+            {
+                gangMemberController.SetBool("RunningForward",false);
+                gangMemberController.SetBool("Idle", true);
             }
         }
 
@@ -96,7 +103,8 @@ public class GangMemberController : MonoBehaviour
         {
             //Change color based on owner:
             /*startingMaterial.color = player2Controlled;*/
-            shirtColor = gangMemberShirt.material;
+
+        
             shirtColor.SetColor("_Color", player2Controlled);
 
             //Make them follow their owner:
@@ -107,6 +115,12 @@ public class GangMemberController : MonoBehaviour
                 
                 gangMemberController.SetBool("RunningForward",true);
                 gangMemberController.SetBool("Idle", false);
+            }
+
+            else
+            {
+                gangMemberController.SetBool("RunningForward",false);
+                gangMemberController.SetBool("Idle", true);
             }
         }
     }

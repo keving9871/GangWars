@@ -197,6 +197,12 @@ RectTransform:
   m_AnchoredPosition: {x: 112.19998, y: 36.539993}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!137 &391829816 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174307388261039302, guid: 998f2731fc8f4584b90a9f2eaefd2c32,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945220874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &493114999
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,120 +383,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1514132365
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4650713252218707821, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_Name
-      value: Gang Member
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378329662552033219, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: player1Controlled.r
-      value: 0.06666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: player1Controlled.g
-      value: 0.68235296
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: player1Controlled.b
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: pc
-      value: 
-      objectReference: {fileID: 837651861}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: Player1
-      value: 
-      objectReference: {fileID: 8296172669316457348}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: player2Controlled.r
-      value: 0.9686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: player2Controlled.g
-      value: 0.07058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: player2Controlled.b
-      value: 0.36078432
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778698845915515222, guid: f5e728611f5734a8f87f6bb25e18a898,
-        type: 3}
-      propertyPath: Player2
-      value: 
-      objectReference: {fileID: 8296172669021420938}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f5e728611f5734a8f87f6bb25e18a898, type: 3}
 --- !u!1 &1716154823
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 3775384097459418341, guid: 998f2731fc8f4584b90a9f2eaefd2c32,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3775384097459418341, guid: 998f2731fc8f4584b90a9f2eaefd2c32,
         type: 3}
@@ -680,7 +572,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: 61dc6eed80a1212448d0dd44a3528802, type: 2}
     - target: {fileID: 5020995361802883065, guid: 998f2731fc8f4584b90a9f2eaefd2c32,
         type: 3}
       propertyPath: m_IsActive
@@ -728,9 +620,9 @@ MonoBehaviour:
   moveSpeed: 0
   distanceThreshold: 0
   ownership: 1
-  player1Controlled: {r: 0.06666667, g: 0.68235296, b: 0.6, a: 0}
-  player2Controlled: {r: 0.9686275, g: 0.07058824, b: 0.36078432, a: 0}
-  gangMemberShirt: {fileID: 1945220877}
+  player1Controlled: {r: 0.06666667, g: 0.68235296, b: 0.6, a: 1}
+  player2Controlled: {r: 0.9686275, g: 0.07058824, b: 0.36078432, a: 1}
+  gangMemberShirt: {fileID: 391829816}
   gangMemberController: {fileID: 1945220879}
 --- !u!23 &1945220877
 MeshRenderer:
@@ -749,7 +641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 61dc6eed80a1212448d0dd44a3528802, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
