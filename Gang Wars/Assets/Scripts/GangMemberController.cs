@@ -13,10 +13,14 @@ public class GangMemberController : MonoBehaviour
     public Color player1Controlled, player2Controlled;
     private Material startingMaterial;
 
+    public MeshRenderer gangMemberShirt;
+    private Material shirtColor;
+
+    public Animator gangMemberController;
     void Start()
     {
         //Assign the starting material to the renderer componment's material:
-        startingMaterial = GetComponent<Renderer>().material;
+        gangMemberShirt = GetComponent<MeshRenderer>();
 
         //Fill PlayerController in the inspector:
         //pc = new PlayerController();
@@ -73,27 +77,39 @@ public class GangMemberController : MonoBehaviour
         if (ownership == 0)
         {
             //Change color based on owner:
-            startingMaterial.color = player1Controlled;
+            /*startingMaterial.color = player1Controlled;*/
+            shirtColor = gangMemberShirt.material;
+            shirtColor.SetColor("_Color", player1Controlled);
 
             //Make them follow their owner:
             transform.LookAt(Player1.transform);
             if (Vector3.Distance(Player1.transform.position, transform.position) >= distanceThreshold)
             {
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                
+                gangMemberController.SetBool("RunningForward",true);
+                gangMemberController.SetBool("Idle", false);
             }
         }
 
         if (ownership == 1)
         {
             //Change color based on owner:
-            startingMaterial.color = player2Controlled;
+            /*startingMaterial.color = player2Controlled;*/
+            shirtColor = gangMemberShirt.material;
+            shirtColor.SetColor("_Color", player2Controlled);
 
             //Make them follow their owner:
             transform.LookAt(Player2.transform);
             if (Vector3.Distance(Player2.transform.position, transform.position) >= distanceThreshold)
             {
                 transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                
+                gangMemberController.SetBool("RunningForward",true);
+                gangMemberController.SetBool("Idle", false);
             }
         }
     }
 }
+
+

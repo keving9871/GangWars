@@ -730,6 +730,8 @@ MonoBehaviour:
   ownership: 1
   player1Controlled: {r: 0.06666667, g: 0.68235296, b: 0.6, a: 0}
   player2Controlled: {r: 0.9686275, g: 0.07058824, b: 0.36078432, a: 0}
+  gangMemberShirt: {fileID: 1945220877}
+  gangMemberController: {fileID: 1945220879}
 --- !u!23 &1945220877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -768,6 +770,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &1945220879 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6552412092000803231, guid: 998f2731fc8f4584b90a9f2eaefd2c32,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945220874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1981825714
 GameObject:
   m_ObjectHideFlags: 0
