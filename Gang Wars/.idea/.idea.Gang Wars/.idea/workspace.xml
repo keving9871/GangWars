@@ -49,7 +49,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/TerritoryController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-448">
@@ -96,28 +96,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+            <state relative-caret-position="160">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
-                <marker date="1576174630320" expanded="false" signature="6:130" ph="..." />
-                <marker date="1576174630320" expanded="true" signature="177:3200" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="749:853" ph="/* public Text player1GangMembersListText; ... */" />
-                <marker date="1576174630320" expanded="true" signature="1040:1391" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="1095:1194" ph="/* player1GangMembersListText.enabled = false; ... */" />
-                <marker date="1576174630320" expanded="true" signature="1410:3197" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="1611:1659" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="1723:1946" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="1979:2204" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="2264:2532" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="2565:2663" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="2697:2794" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="2832:2992" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="2855:2945" ph="/* Add the list to the text object ... */" />
-                <marker date="1576174630320" expanded="true" signature="3033:3191" ph="{...}" />
-                <marker date="1576174630320" expanded="true" signature="3056:3146" ph="/* Add the list to the text object ... */" />
+                <marker date="1576175854675" expanded="false" signature="6:130" ph="..." />
+                <marker date="1576175854675" expanded="true" signature="177:4574" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="748:852" ph="/* public Text player1GangMembersListText; ... */" />
+                <marker date="1576175854675" expanded="true" signature="1039:1584" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="1094:1193" ph="/* player1GangMembersListText.enabled = false; ... */" />
+                <marker date="1576175854675" expanded="true" signature="1603:4571" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="1804:1852" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="1957:2180" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="2238:2463" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="2548:2816" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="2928:3154" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="3212:3451" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="3536:3820" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="3895:3993" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="4027:4124" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="4206:4366" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="4229:4319" ph="/* Add the list to the text object ... */" />
+                <marker date="1576175854675" expanded="true" signature="4407:4565" ph="{...}" />
+                <marker date="1576175854675" expanded="true" signature="4430:4520" ph="/* Add the list to the text object ... */" />
               </folding>
             </state>
           </provider>
@@ -250,12 +253,12 @@
       <updated>1575407659840</updated>
       <workItem from="1575407676619" duration="1089000" />
       <workItem from="1576010578291" duration="1557000" />
-      <workItem from="1576174307878" duration="1214000" />
+      <workItem from="1576174307878" duration="1676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1214000" />
+    <option name="totallyTimeSpent" value="1676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +270,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
@@ -337,31 +340,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-          <folding>
-            <marker date="1576174630320" expanded="false" signature="6:130" ph="..." />
-            <marker date="1576174630320" expanded="true" signature="177:3200" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="749:853" ph="/* public Text player1GangMembersListText; ... */" />
-            <marker date="1576174630320" expanded="true" signature="1040:1391" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="1095:1194" ph="/* player1GangMembersListText.enabled = false; ... */" />
-            <marker date="1576174630320" expanded="true" signature="1410:3197" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="1611:1659" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="1723:1946" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="1979:2204" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="2264:2532" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="2565:2663" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="2697:2794" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="2832:2992" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="2855:2945" ph="/* Add the list to the text object ... */" />
-            <marker date="1576174630320" expanded="true" signature="3033:3191" ph="{...}" />
-            <marker date="1576174630320" expanded="true" signature="3056:3146" ph="/* Add the list to the text object ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -423,6 +401,34 @@
             <marker date="1576175097423" expanded="true" signature="9020:9301" ph="{...}" />
             <marker date="1576175097423" expanded="true" signature="9046:9295" ph="{...}" />
             <marker date="1576175097423" expanded="true" signature="9086:9247" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <marker date="1576175854675" expanded="false" signature="6:130" ph="..." />
+            <marker date="1576175854675" expanded="true" signature="177:4574" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="748:852" ph="/* public Text player1GangMembersListText; ... */" />
+            <marker date="1576175854675" expanded="true" signature="1039:1584" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="1094:1193" ph="/* player1GangMembersListText.enabled = false; ... */" />
+            <marker date="1576175854675" expanded="true" signature="1603:4571" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="1804:1852" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="1957:2180" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="2238:2463" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="2548:2816" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="2928:3154" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="3212:3451" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="3536:3820" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="3895:3993" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="4027:4124" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="4206:4366" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="4229:4319" ph="/* Add the list to the text object ... */" />
+            <marker date="1576175854675" expanded="true" signature="4407:4565" ph="{...}" />
+            <marker date="1576175854675" expanded="true" signature="4430:4520" ph="/* Add the list to the text object ... */" />
           </folding>
         </state>
       </provider>
